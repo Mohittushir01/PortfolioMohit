@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="salecardstyle.css">
+    <title>Sale & purchase card</title>
+</head>
+
+<body>
+    <div class="main">
+        <h2 class="title">Sale & Purchase Card</h2>
+        <div class="card">
+            <img src="./laptop images/laptop first.jpg" alt="">
+
+            <h4 class="card-title">Card Title</h4>
+            <p>Descipration Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="add-item">
+
+                <button class="add-btn">Add to Cart</button>
+                <!-- <button class="add-btn">Add to Cart</button> -->
+               
+                
+                <div class="allbtn">
+                    <button class="remover-item">-</button>
+                    <input type="text" class="display-itemNumber" placeholder="Number Of  items">
+                    <button class="add-itembtn">+</button>
+                </div>
+                <p class="display-price"></p>
+               
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+        // adddBtn i made for add item in the carat.
+        const addBtn = document.querySelector('.add-btn');
+        // in displayitems have to show data on input screen
+        const displayItemNumber = document.querySelector('.display-itemNumber');
+        // add btn number of items 
+        const additembtn = document.querySelector('.add-itembtn');
+        // remove btn number of items
+        const removeritem = document.querySelector('.remover-item');
+        // display-price
+        const itemPrice = document.querySelector('.display-price');
+
+
+        // add 
+        let itemNumber = 0;
+        let priceItem = 20000;
+        addBtn.addEventListener('click', () => {
+
+           
+            if(itemNumber<10){
+                itemNumber++;
+            displayItemNumber.value = itemNumber
+            itemPrice.innerText =  (itemNumber*priceItem)
+            }
+            else{
+                alert("You can't add more than 10 items");
+            }
+        })
+        // remove
+        removeritem.addEventListener('click', () => {
+            if (itemNumber == 0) {
+                alert("already 0")
+            }
+
+            else {
+                itemNumber--;
+                displayItemNumber.value = itemNumber
+                itemPrice.innerText =  (itemNumber*priceItem)
+            }
+        })
+        // add item number
+        additembtn.addEventListener('click', () => {
+
+            itemNumber++;
+            displayItemNumber.value = itemNumber
+            itemPrice.innerText =  (itemNumber*priceItem)
+           
+            
+
+        });
+
+       // let priceItem = '20000';
+        // display price
+        //itemPrice.addEventListener('click', () => {
+          //  itemPrice.value = priceItem
+
+            
+        
+        
+
+
+
+    </script>
+</body>
+
+</html>

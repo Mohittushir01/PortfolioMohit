@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html,body {
+    overflow-x: hidden;
+}
+
+
+
+.navbar {
+    width: 100%;
+    height: 10vh;
+    background: #c95050;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    text-align: center;
+}
+.navbar .logo {
+    font-size: 20px;
+    color: #fff;
+}
+
+.navbar .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    font-size: 20px;
+}
+
+.navbar .nav-list li a {
+    color: #fff;
+}
+
+.menu-icons {
+    color: #fff;
+    font-size: 25px;
+    display: none;
+}
+
+.menu-icons [name="menu"] {
+    margin-top: 8px;
+}
+
+.menu-icons [name="close"] {
+    display: none;
+}
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:980px) {
+    .navbar .logo {
+        z-index: 10;
+    }
+    .menu-icons {
+        display: block;
+        z-index: 999;
+    }
+    .navbar {
+        position: relative;
+    }
+    .navbar .nav-list {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #222;
+        left: 0;
+        top: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: .5s all linear;
+    }
+    .active .nav-list {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    .active .menu-icons [name="menu"] {
+        display: none;
+    }
+    .active .menu-icons [name="close"] {
+        display: block;
+    }
+}
+
+.firstsection {
+    min-height: 100%;
+    width: 100%;
+    /* background-color: bisque; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15%;
+
+    .text p {
+        font-size: 16px;
+    }
+
+    .greenText {
+        color: #1cbe59;
+    }
+
+    .purpleText {
+        color: #8067f0;
+    }
+
+    .orangeText {
+        color: #f75023;
+        font-size: 28px;
+    }
+
+
+    .yellowText {
+        color: #f0c45c;
+    }
+
+    .orangeBackground {
+        background-color: #fedfd7;
+    }
+
+    .greenBackground {
+        background-color: #ddf5e6;
+    }
+
+    .purpleBackground {
+        background-color: #ece8fd;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .job {
+        font-size: 25px;
+    }
+
+
+}
+
+#textDetails {
+    width: 45%;
+
+}

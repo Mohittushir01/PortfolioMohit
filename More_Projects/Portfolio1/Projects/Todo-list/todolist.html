@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+    <link rel="stylesheet" href="todostyle.css">
+</head>
+
+<body>
+    <div class="mainbg">
+
+        <div class="todoBox">
+            <h4>To DO List</h4>
+            <form>
+                <div class="textbox">
+                    <input type="text" name="To-Dolist" id="inputText" placeholder="Type Something here....">
+                    <button type="submit" class="btn">Add</button>
+                    <!-- <button type="reset" class="btn" id="Reset">Reset All</button> -->
+                </div>
+            </form>
+
+
+            <div class="list-item">
+
+            </div>
+
+            <div class="removeall">
+                <button type="button" class="btn" id="clearall">Remove All</button>
+
+            </div>
+
+
+        </div>
+        <script>
+            let textInput = document.getElementById("inputText");
+            let addButton = document.querySelector(".btn");
+            let listItem = document.querySelector(".list-item");
+            let clear = document.getElementById("clearall");
+
+            function addDatatoLocalStorage() {
+                localStorage.setItem('userData', listItem.innerHTML);
+            }
+            function addtodos() {
+                let userInput = textInput.value;
+                if (userInput == "") {
+                    alert("Please enter a task");
+                }
+                else {
+                    let li = document.createElement("LI");
+                    li.innerHTML = userInput;
+                    listItem.appendChild(li);
+
+                    let span = document.createElement("SPAN");
+                    span.innerHTML = "\u00d7";
+                    li.appendChild(span);
+
+                    addDatatoLocalStorage();
+
+                }
+
+
+                textInput.value = "";
+
+
+            }
+            
+            //
+
+            clear.addEventListener("click", () => {
+                listItem.innerHTML = "";
+                localStorage.removeItem('userData');
+               
+            })
+
+
+
+
+
+
+            function getItem() {
+                listItem.innerHTML = localStorage.getItem('userData');
+            }
+            getItem();
+
+            addButton.addEventListener("click", (e) => {
+                e.preventDefault();
+                addtodos()
+            });
+            listItem.addEventListener("click", (e) => {
+                if (e.target.tagName === "LI") {
+                    e.target.classList.toggle("checked");
+
+                } else if (e.target.tagName === "SPAN") {
+                    e.target.parentElement.remove();
+                }
+            })
+
+
+        </script>
+</body>
+
+</html>
+
+<!-- /? -->

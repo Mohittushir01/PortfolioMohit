@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheather application</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="wheatherstyle.css">
+</head>
+
+<body>
+    <h1>Wheather</h1>
+    <div class="box">
+        <!-- ====================================== bg image  -->
+        <div class="imagehere">
+
+            <!-- ================================ -->
+            <div class="searchBox">
+                <input type="text" id="searchCity" placeholder="CITY Here">
+                <button type="button" class="sbtn">Search</button>
+            </div>
+
+            <!-- ====================================== -->
+            <div class="dtime">
+
+                <h5 class="date">date</h5>
+                <h5 class="time">Time</h5>
+
+            </div>
+
+        </div>
+        <!-- ========================================= -->
+        <div class="weathercontent">
+
+            <div class="weather">
+                <h4>weather</h4>
+            </div>
+
+            <div class="humidity">
+                <h4>humidity</h4>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <script>
+        let search = document.getElementById('searchCity');
+        const weather = document.querySelector('.weather');
+        const temprature = document.querySelector('.temprature');
+        const humidity = document.querySelector('.humidity');
+        const date = document.querySelector('.date');
+        const time = document.querySelector('.time');
+        let searchbtn = document.querySelector('.sbtn');
+        //const city='';
+        let city = 'Delhi';
+
+        // const wapi= '85f65f0e7ecf5b590c3870db5e1e5491';
+        // const apiurl= "https://api.openweathermap.org/data/2.5/weather?q='delhi'&appid=85f65f0e7ecf5b590c3870db5e1e5491";
+
+        const getDateTime = (dt) => {
+            const curDate = new Date(dt * 1000);
+            // console.log(date)
+            let options = {
+                week: 'short',
+                month: 'short',
+                year: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric'
+            };
+
+            let dateFormat = new Intl.DateTimeFormat('en-US', options);
+            //return dateFormate.format(date);
+            return dateFormat.format(curDate);
+
+          
+        }
+
+        searchbtn.addEventListener('click', () => {
+            city = search.value;
+            getWather();
+            search.value = '';
+        });
+        console.log(search)
+
+        const getWather = async () => {
+
+            const apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=85f65f0e7ecf5b590c3870db5e1e5491&units=metric`;
+
+            try {
+                const res = await fetch(apiurl)
+                const data = await res.json()
+                const { dt, name, main, sys, wind } = data;
+                console.log(data)
+                humidity.innerHTML = `${main.humidity}&#176`;
+                date.innerHTML = getDateTime(dt);
+                weather.innerHTML=`${main.temp}&#176`;
+                //date.innerHTML=dt;
+
+
+            }
+            catch (error) {
+                console.log("api not working"+error)
+            }
+
+        } 
+        getWather();
+    
+
+
+    </script>
+</body>
+
+</html>
