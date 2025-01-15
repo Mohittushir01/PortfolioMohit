@@ -251,6 +251,8 @@ form button {
     margin: 0 15px;
     color: #e34;
     backdrop-filter: blur(9px);
+    font-size: 12px;
+    text-align: left;
 }
 
 .mission-vision{
