@@ -51,7 +51,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+
     width: 100%;
     display: flex;
     justify-content: center;
@@ -61,6 +61,7 @@
 }
 
 .hero-content {
+     margin: 25px auto;
     justify-content: center;
     text-align: center;
 
@@ -82,6 +83,7 @@
 }
 
 .form-container {
+    margin: 55px 0;
     backdrop-filter: blur(9px);
     padding: 20px;
     width: 50%;
