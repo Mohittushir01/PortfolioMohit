@@ -344,6 +344,10 @@ footer{
         place-items: center;
     
     }
+    .edract-advantage-content h4{
+        font-size: 12px;
+        font-weight: 500;
+    }
     .circle-card{
         width: 150px;
     }
