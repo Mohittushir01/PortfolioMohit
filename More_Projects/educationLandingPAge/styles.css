@@ -1,0 +1,637 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #f0f8ff;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    color: #333;
+    width: 50%;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.form-container {
+    background: #fff;
+    padding: 20px;
+    width: 40%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+form button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #005bb5;
+}
+
+.body {
+    padding: 40px;
+    background: #f7f7f7;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+ul, ol {
+    margin-left: 20px;
+}
+
+.testimonials {
+    background-color: #f0f0f0;
+    padding: 40px;
+}
+
+.testimonial {
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.faq {
+    background-color: #ffffff;
+    padding: 40px;
+    margin-top: 20px;
+}
+
+dl dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+dl dd {
+    margin-bottom: 10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1, .hero p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-container {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .body {
+        padding: 20px;
+    }
+
+    .eduract-advantage ul {
+        padding-left: 0;
+        list-style-type: none;
+    }
+
+    .testimonials {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .body h2 {
+        font-size: 1.2rem;
+    }
+
+    .testimonials .testimonial p {
+        font-size: 0.9rem;
+    }
+} */
+
+
+
+/* Basic Reset */
+
+/* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #f0f8ff;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    color: #333;
+    width: 50%;
+    opacity: 0;
+    animation: slideInLeft 1s forwards 0.5s;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #666;
+    opacity: 0;
+    animation: slideInLeft 1s forwards 1s;
+}
+
+.form-container {
+    background: #fff;
+    padding: 20px;
+    width: 40%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: slideInRight 1s forwards 1.5s;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInInputs 1s forwards 2s;
+}
+
+form button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeInButton 1s forwards 2.5s;
+}
+
+form button:hover {
+    background-color: #005bb5;
+}
+
+
+.body {
+    padding: 40px;
+    background: #f7f7f7;
+    animation: fadeIn 1.5s ease-out;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 1s;
+}
+
+ul, ol {
+    margin-left: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 1.5s;
+}
+
+
+.testimonials {
+    background-color: #f0f0f0;
+    padding: 40px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.testimonial {
+    margin-bottom: 20px;
+    font-style: italic;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 2s;
+}
+
+
+.faq {
+    background-color: #ffffff;
+    padding: 40px;
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+dl dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+dl dd {
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInInputs {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1, .hero p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-container {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .body {
+        padding: 20px;
+    }
+
+    .eduract-advantage ul {
+        padding-left: 0;
+        list-style-type: none;
+    }
+
+    .testimonials {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .body h2 {
+        font-size: 1.2rem;
+    }
+
+    .testimonials .testimonial p {
+        font-size: 0.9rem;
+    }
+}
+ */
+/* Basic Reset */
+
+
+/* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #f0f8ff;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    color: #333;
+    width: 50%;
+    opacity: 0;
+    animation: slideInLeft 1s forwards 0.5s;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #666;
+    opacity: 0;
+    animation: slideInLeft 1s forwards 1s;
+}
+
+.form-container {
+    background: #fff;
+    padding: 20px;
+    width: 40%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: slideInRight 1s forwards 1.5s;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInInputs 1s forwards 2s;
+}
+
+form button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeInButton 1s forwards 2.5s;
+}
+
+form button:hover {
+    background-color: #005bb5;
+}
+
+
+.body {
+    padding: 40px;
+    background: #f7f7f7;
+    animation: fadeIn 1.5s ease-out;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 1s;
+}
+
+ul, ol {
+    margin-left: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 1.5s;
+}
+
+
+.testimonials {
+    background-color: #f0f0f0;
+    padding: 40px;
+    animation: fadeIn 1.5s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-container {
+    display: flex;
+    animation: slideTestimonials 12s infinite ease-in-out;
+}
+
+.testimonial {
+    min-width: 100%;
+    padding: 20px;
+    font-style: italic;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.testimonial span {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideTestimonials {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    40% {
+        transform: translateX(-100%);
+    }
+    60% {
+        transform: translateX(-200%);
+    }
+    80% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInInputs {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1, .hero p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-container {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .body {
+        padding: 20px;
+    }
+
+    .eduract-advantage ul {
+        padding-left: 0;
+        list-style-type: none;
+    }
+
+    .testimonials {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .body h2 {
+        font-size: 1.2rem;
+    }
+
+    .testimonials .testimonial p {
+        font-size: 0.9rem;
+    }
+} */
+
+

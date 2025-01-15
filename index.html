@@ -395,22 +395,22 @@
 
                <!-- ----------------------  I will add some project here  ---------------------------------------------------- -->
 
-               <!-- <div class="columns portfolio-item">
+               <div class="columns portfolio-item">
                   <div class="item-wrap">
 
                      <a href="#modal-05" title="">
-                        <img alt="" src="images/portfolio/farmerboy.jpg">
+                        <img alt="" src="images/portfolio/EduractScreenshotbox.png">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
-          					      <h5>Farmer Boy</h5>
-                              <p>Branding</p>
+          					      <h5>Education website</h5>
+                              <p>web page</p>
           					   </div>
                         </div>
                         <div class="link-icon"><i class="icon-plus"></i></div>
                      </a>
 
                   </div>
-          		</div>  -->
+          		</div> 
                <!-- item end -->
 
                <!-- <div class="columns portfolio-item">
@@ -555,25 +555,26 @@
 
 
 
-         <!-- <div id="modal-05" class="popup-modal mfp-hide">
+         <div id="modal-05" class="popup-modal mfp-hide">
 
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-farmerboy.jpg" alt="" />
+		      <img class="scale-with-grid" src="images/portfolio/modals/EduractScreenshot.png" alt="" />
 
 		      <div class="description-box">
-			      <h4>Farmer Boy</h4>
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-               <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+			      <h4>Education website</h4>
+			      <p>A Educational website is a website that represents education online on the web pages.</p>
+               <span class="categories"><i class="fa fa-tag"></i>HTML5, CSS3, JavaScript, Webdesign, Web
+                  Development</span>
 		      </div>
 
             <div class="link-box">
-               <a href="http://srikrishnacommunication.com/Giridesigns.html" target="_blank">Details</a>
+               <a href="./More_Projects/educationLandingPAge/Landingpage.html" target="_blank">Details</a>
 		         <a class="popup-modal-dismiss">Close</a>
             </div>
 
-	      </div> -->
+	      </div>
          <!-- modal-05 End -->
-
-         <!-- <div id="modal-06" class="popup-modal mfp-hide">
+<!-- 
+         <div id="modal-06" class="popup-modal mfp-hide">
 
 		      <img class="scale-with-grid" src="images/portfolio/modals/m-girl.jpg" alt="" />
 
@@ -667,48 +668,33 @@
       <div class="row">
 
          <div class="eight columns">
+            <form action="https://api.web3forms.com/submit" method="POST">
 
-            <!-- form -->
-            <form action="" method="post" id="contactForm" name="contactForm">
-               <fieldset>
+               <!-- Replace with your Access Key -->
+               <input type="hidden" name="access_key" value="806aa98e-90a4-47a0-87fa-442751f2e350">
+           
+               <!-- Form Inputs. Each input must have a name="" attribute -->
+               <label for="contactName">Name <span class="required">*</span></label>
+               <input type="text" name="name" required>
 
-                  <div>
-                     <label for="contactName">Name <span class="required">*</span></label>
-                     <input type="text" value="" size="35" id="contactName" name="contactName" placeholder="Sorry Form is Not working now, whatsapp me or call me" disabled>
-                  </div>
 
-                  <div>
-                     <label for="contactEmail">Email <span class="required">*</span></label>
-                     <input type="text" value="" size="35" id="contactEmail" name="contactEmail"  placeholder="Sorry Form is Not working now, whatsapp me or call me" disabled>
-                  </div>
+               <label for="contactEmail">Email <span class="required">*</span></label> 
+               <input type="email" name="email" required>
 
-                  <div>
-                     <label for="contactSubject">Subject</label>
-                     <input type="text" value="" size="35" id="contactSubject" name="contactSubject"  placeholder="Sorry Form is Not working now, whatsapp me or call me" disabled>
-                  </div>
+               <label for="contactSubject">Subject</label>
+               <input type="text" value="" size="35" id="contactSubject" name="contactSubject" >
 
-                  <div>
-                     <label for="contactMessage">Message <span class="required">*</span></label>
-                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage" placeholder="Sorry Form is Not working now, whatsapp me or call me  Whatsapp +91 8700243404" disabled></textarea>
-                  </div>
-
-                  <div>
-                     <button class="submit" id="subbtn">Submit</button>
-                     <!-- <span id="image-loader">
-                        <img alt="" src="images/loader.gif">
-                     </span> -->
-                  </div>
-
-               </fieldset>
-            </form> <!-- Form End -->
-
-            <!-- contact-warning -->
-            <div id="message-warning"> Error </div>
-            <!-- contact-success -->
-            <div id="message-success">
-               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
-            </div>
-
+               <label for="contactMessage">Message <span class="required">*</span></label>
+               <textarea name="message" required></textarea>
+           
+               <!-- Honeypot Spam Protection -->
+               <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+           
+             
+           
+               <button type="submit"  class="submit">Submit Form</button>
+           
+           </form>
          </div>
 
 
@@ -801,11 +787,11 @@
    <script src="js/magnific-popup.js"></script>
    <script src="js/init.js"></script>
   <script>
-   let subbtn = document.querySelector('#subbtn');
-   subbtn.addEventListener('click', function() {
-      alert('Form in Not working! Whatapp +918700243404'); 
+ //  let subbtn = document.querySelector('#subbtn');
+   //subbtn.addEventListener('click', function() {
+     // alert('Form in Not working! Whatapp +918700243404'); 
      
-     });
+    // });
   </script>
   <script>
    document.addEventListener('contextmenu', function(e) {
