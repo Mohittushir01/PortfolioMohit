@@ -1,1 +1,1 @@
-https://mohittushir99.github.io/mohitdevportfolio/
+https://mohittushir01.github.io/PortfolioMohit/

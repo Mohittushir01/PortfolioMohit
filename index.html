@@ -327,7 +327,7 @@
                   <div class="item-wrap">
 
                      <a href="#modal-01" title="">
-                        <img alt="" src="./images/portfolio/todolist.png">
+                        <img alt="" src="images/portfolio/Todolist.png">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
                               <h5>To DO list</h5>
@@ -477,7 +477,7 @@
 
          <div id="modal-01" class="popup-modal mfp-hide">
 
-            <img class="scale-with-grid" src="./images/portfolio/modals/m-todolist.png" alt="" />
+            <img class="scale-with-grid" src="images/portfolio/modals/m-Todolist.png" alt="" />
             <!-- To do List Modal section -->
             <div class="description-box">
                <h4>TO DO LIst</h4>
@@ -488,7 +488,7 @@
 
             <div class="link-box">
 
-               <a href="./More_Projects/todolist/todolist.html">Details</a>
+               <a href="./More_Projects/todolist/todolist.html" target="_blank">Details</a>
                <a class="popup-modal-dismiss">Close</a>
             </div>
 
@@ -525,7 +525,7 @@
             </div>
 
             <div class="link-box">
-               <a href="./More_Projects/Portfolio1/portfolio1.html">Details</a>
+               <a href="./More_Projects/Portfolio1/portfolio1.html" target="_blank">Details</a>
                <a class="popup-modal-dismiss">Close</a>
             </div>
 
@@ -670,6 +670,7 @@
          <div class="eight columns">
             <form action="https://api.web3forms.com/submit" method="POST">
 
+<<<<<<< HEAD
                <!-- Replace with your Access Key -->
                <input type="hidden" name="access_key" value="806aa98e-90a4-47a0-87fa-442751f2e350">
            
@@ -683,6 +684,36 @@
 
                <label for="contactSubject">Subject</label>
                <input type="text" value="" size="35" id="contactSubject" name="contactSubject" >
+=======
+            <!-- form -->
+          <form action="https://api.web3forms.com/submit" method="POST">
+
+               <!-- Replace with your Access Key -->
+               <input type="hidden" name="access_key" value="806aa98e-90a4-47a0-87fa-442751f2e350">
+           
+               <!-- Form Inputs. Each input must have a name="" attribute -->
+               <label for="contactName">Name <span class="required">*</span></label>
+               <input type="text" name="name" required>
+
+
+               <label for="contactEmail">Email <span class="required">*</span></label> 
+               <input type="email" name="email" required>
+
+               <label for="contactSubject">Subject</label>
+               <input type="text" value="" size="35" id="contactSubject" name="contactSubject" >
+
+               <label for="contactMessage">Message <span class="required">*</span></label>
+               <textarea name="message" required></textarea>
+           
+               <!-- Honeypot Spam Protection -->
+               <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+           
+             
+           
+               <button type="submit"  class="submit">Submit Form</button>
+           
+           </form>
+>>>>>>> a7c5a11e810f77dc3977c4283619a795bb44999c
 
                <label for="contactMessage">Message <span class="required">*</span></label>
                <textarea name="message" required></textarea>
@@ -785,15 +816,13 @@
    <script src="js/waypoints.js"></script>
    <script src="js/jquery.fittext.js"></script>
    <script src="js/magnific-popup.js"></script>
+  
    <script src="js/init.js"></script>
-  <script>
- //  let subbtn = document.querySelector('#subbtn');
-   //subbtn.addEventListener('click', function() {
-     // alert('Form in Not working! Whatapp +918700243404'); 
-     
-    // });
-  </script>
-  <script>
+
+   
+  
+  
+   <script>
    document.addEventListener('contextmenu', function(e) {
        e.preventDefault();
        alert('Right-click Goil Bata Masti Nahi HAHA :-)');
